@@ -6,3 +6,10 @@
 
 ## Свойства
 TrueString, FalseString
+
+## Пример
+
+    int х = 2;
+    bool y = х < 5;
+    if (y)
+        Console.WriteLine("Да!");

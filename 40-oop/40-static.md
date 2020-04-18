@@ -20,3 +20,31 @@
     {
         Console.WriteLine($"У класса {count} объекта(ов)");
     }
+
+## Рефакторинг и статический метод
+Было:
+
+    static void Main()
+    {
+        int x = 12 * 10;
+        int y = 12 * 12;
+        Console.WriteLine(x); // 120
+        Console.WriteLine(y); // 144
+        Console.ReadKey();
+    }
+
+Стало:
+
+    static void Main()
+    {
+        Console.WriteLine(FeetToInches(10)); // 120
+        Console.WriteLine(FeetToInches(12)); // 144
+        Console.ReadKey();
+    }
+
+    // В 1 футе 12 дюймов
+    static int FeetToInches(int feet)
+    {
+        int inches = 12 * feet;
+        return inches;
+    }
